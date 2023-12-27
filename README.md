@@ -7,12 +7,12 @@ This project is a Python-based .dat to .csv file converter initially developed d
 ### Key Features
 
 - Conversion of .dat files from NIWE's wind energy data to .csv format.
-- Utilizes Python's csv,re and sys libraries to handle data processing and conversion.
-- A responsive website to convert file effortlessely.
+- Utilizes Python's CSV, re, and sys libraries to handle data processing and conversion.
+- A responsive website to convert files effortlessly.
 
 ## Background
 
-During my internship at NIWE, I enthusiastically embarked on the challenge of converting .dat files to .csv, an essential requirement for data analysis and visualization. Despite encountering complex data structures and a limited timeframe, I embraced the challenge, leading to a rewarding learning journey.
+During my internship at NIWE, I enthusiastically embarked on the challenge of **converting .dat files to .csv**, an essential requirement for data analysis and visualization. Despite encountering complex data structures and a limited timeframe, I embraced the challenge, leading to a rewarding learning journey.
 
 I was asked to create a Python code for easy conversion of .dat files to .csv format. However, I took an **innovative step** forward by deploying a user-friendly website, enabling anyone, regardless of technical expertise, to perform the conversion effortlessly. This proactive approach allows for **automation and provides accessibility to perform the conversion in a fraction of a second using any device, anytime and anywhere.**
 
@@ -29,18 +29,11 @@ I was asked to create a Python code for easy conversion of .dat files to .csv fo
 - **conversion_utils.py**: Utility functions used for data processing.
 - **templates**: This directory holds HTML templates used in the application. The upload.html file resides here, facilitating file upload functionality.
 - **converted_files**:  A folder dedicated to storing converted CSV files. The converted output files are stored in this directory.
-- **README.md**: The current document providing an overview of the project.
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- pandas library
+- **README.md**: The current document provides an overview of the project.
 
 ## Scope of the problem
 
-I have a .dat file containing data segments structured in a format similar to the one below:
+I had a .dat file containing data segments structured in a format similar to the one below:
 
 ```
 $
@@ -93,7 +86,7 @@ Again the same above format only the data will change. This dataset contains mul
 $
 ```
 
-I have to convert this data into a CSV file named 'output.csv' with a specific format:
+Now, I have to convert this data into a CSV file named 'output.csv' with a specific format:
 
 1. The first row contains headers specified as below.
 2. Subsequent rows should contain:
@@ -113,6 +106,8 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
 
 ```
 
+## Getting Started
+
 ### Algorithm for the Code -
 
 1. Read .dat file and extract relevant data segments
@@ -123,7 +118,7 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
 
 4. Generate 'output.csv' with appropriate headers and write data
 
-5. Write each timestamp, wind speeds, and directions to the CSV file in the specified format
+5. Write each timestamp, wind speed, and directions to the CSV file in the specified format
 
 ## Tech Stack
 
@@ -135,20 +130,6 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge">
     <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge">
 </div>
-
-
-## Deployment
-
-![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)
-The site can be accessed at [saravanakumar.pythonanywhere.com](https://saravanakumar.pythonanywhere.com).
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- Flask framework
-
 
 ### Python Code:
 
@@ -247,15 +228,19 @@ def convert_dat_to_csv(input_file_path): # Convert .dat file to .csv file
 - Date-time information is extracted from the header and organized into a Timestamp dictionary.
 - Altitude data is processed and stored in the final_row dictionary.
 
-4. CSV File Writing: Ultimately, the processed data contained in the table is written into an "output.csv" file using csv.DictWriter. Prior to writing, the field names are sorted based on predefined rules to ensure a structured CSV layout.
+4. CSV File Writing: Ultimately, the processed data contained in the table is written into an "output.csv" file using csv.DictWriter. Before writing, the field names are sorted based on predefined rules to ensure a structured CSV layout.
+
+
+## Deployment
+
+![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)
+The site can be accessed at [saravanakumar.pythonanywhere.com](https://saravanakumar.pythonanywhere.com).
 
 ### Acknowledgement
 
 I extend my sincere gratitude to the following individuals whose guidance and support contributed significantly to this project:
 
-- **Boopathy Sir (Mentor)**: For providing invaluable guidance and mentorship throughout the project's development, offering insights and direction.
-- **Senthil Sir (Data Provider)**: For providing access to the crucial wind energy data that served as the foundation for this conversion project.
-- **Vinoth Sir (Supervisor)**: For providing oversight and valuable input that ensured the project aligned with its objectives and requirements.
-- **Zach Sir (Code Support)**: For offering valuable support and insights during the development phase, aiding in overcoming technical challenges.
+- **Boopathy Sir (Mentor)**: For providing invaluable guidance and mentorship throughout the Internship period, offering insights and direction.
+- **Zach Sir (Technical Support)**: For offering valuable support and insights during the development phase, aiding in overcoming technical challenges.
 
 This project's success and learning experiences were made possible by the invaluable contributions and support from these individuals.
