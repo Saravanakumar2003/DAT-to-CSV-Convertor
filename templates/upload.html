@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+        img {
+            max-width: 100%; /* Make images responsive by setting maximum width */
+            height: auto; /* Ensure images maintain aspect ratio */
+        }
+
+        /* Responsive styles */
+        /* For smaller screens */
+        @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+    
+        header, footer {
+            padding: 8px; /* Reduce padding for header and footer on smaller screens */
+        }
+        }
+
+        /* For larger screens */
+        @media screen and (min-width: 1200px) {
+        body {
+            font-size: 18px; /* Adjust font size for larger screens */
+        }
+    
+        header, footer {
+            padding: 12px; /* Increase padding for header and footer on larger screens */
+        }   
+    }
+
+        /* ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>File Converter</h1>
+    </header>
+
+    <div class="main-content">
+        
+        <!-- .dat to .csv conversion section -->
+        <div class="conversion-section">
+            <h2>Convert File</h2>
+            <!-- Input form for file conversion -->
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".dat">
+                <input type="submit" value="Download">
+            </form>
+            
+        <!-- .dat and .csv comparison section -->
+        <div class="comparison-section">
+            <h2>Input File Format</h2>
+            <p>The .dat file containing data segments should be structured in a format similar to the one below</p>
+            <img src="https://i.postimg.cc/436x9Wd8/dat.jpg" alt=".dat Image">    
+        </div>
+        <div class="comparison-section">
+            <h2>Output File Format</h2>
+            <p class="para">For the given input, the desired output CSV would resemble like the below in csv format</p>
+            <img src="https://i.postimg.cc/HnZxLjxd/csv.jpg" alt=".csv Image">
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Saravanakumar R - Copyright © 2023</p>
+    </footer>
+</body>
+</html>
