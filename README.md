@@ -120,7 +120,7 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
 
 5. Write each timestamp, wind speed, and directions to the CSV file in the specified format
 
-## Tech Stack
+### Tech Stack
 
 - **Python**: Main programming language.
 - **Flask**: Web framework used for the converter website.
@@ -215,32 +215,27 @@ def convert_dat_to_csv(input_file_path): # Convert .dat file to .csv file
 
 # Path: conversion_utils.py
 ```
-## Short Explanation:
+### Short Explanation:
 
-1. Libraries Imported: The code starts by importing required libraries (csv, re, sys).
+1. **Libraries Imported**: The code starts by importing required libraries (csv, re, sys).
 
-2. Parsing .dat File:  It reads a file specified by the input_file_path, splits its content based on the "$" delimiter, processes each chunk of data, and organizes them into a list of dictionaries (table).
+2. **Parsing .dat File**:  It reads a file specified by the input_file_path, splits its content based on the "$" delimiter, processes each chunk of data, and organizes them into a list of dictionaries (table).
 
-3. Data Processing:
+3. **Data Processing**:
 
 - The function to_row splits lines into fields.
 - Assertions validate specific lines in each chunk to ensure data structure.
 - Date-time information is extracted from the header and organized into a Timestamp dictionary.
 - Altitude data is processed and stored in the final_row dictionary.
 
-4. CSV File Writing: Ultimately, the processed data contained in the table is written into an "output.csv" file using csv.DictWriter. Before writing, the field names are sorted based on predefined rules to ensure a structured CSV layout.
+4. **CSV File Writing**: Ultimately, the processed data contained in the table is written into an "output.csv" file using csv.DictWriter. Before writing, the field names are sorted based on predefined rules to ensure a structured CSV layout.
 
 
-## Deployment
+### Deployment
 
 ![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)
 The site can be accessed at [saravanakumar.pythonanywhere.com](https://saravanakumar.pythonanywhere.com).
 
 ### Acknowledgement
 
-I extend my sincere gratitude to the following individuals whose guidance and support contributed significantly to this project:
-
-- **Boopathy Sir (Mentor)**: For providing invaluable guidance and mentorship throughout the Internship period, offering insights and direction.
-- **Zach Sir (Technical Support)**: For offering valuable support and insights during the development phase, aiding in overcoming technical challenges.
-
-This project's success and learning experiences were made possible by the invaluable contributions and support from these individuals.
+I express my deepest gratitude to the NIWE team for their invaluable support and guidance throughout this project. **Boopathy Sir** provided exceptional mentorship, offering insightful guidance during the internship. **Zach Sir's** technical support was instrumental in overcoming challenges. Special thanks to **Senthil Sir** for providing crucial data and **Vinoth Sir** for meticulously validating project outputs. Their contributions were pivotal to the project's success and the invaluable learning experiences gained.
