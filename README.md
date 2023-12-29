@@ -25,10 +25,11 @@ I was asked to create a Python code for easy conversion of .dat files to .csv fo
 
 ## Project Structure
 
-- **code.py**: Python script for the .dat to .csv conversion.
+- **app.py**: Python script for the .dat to .csv conversion.
 - **conversion_utils.py**: Utility functions used for data processing.
 - **templates**: This directory holds HTML templates used in the application. The upload.html file resides here, facilitating file upload functionality.
-- **converted_files**:  A folder dedicated to storing converted CSV files. The converted output files are stored in this directory.
+- **converted_files**: The converted output files are stored in this directory.
+- **uploaded_files**:  A folder dedicated to storing uploaded .dat files for the conversion process.
 - **README.md**: The current document provides an overview of the project.
 
 ## Scope of the problem
@@ -233,8 +234,12 @@ def convert_dat_to_csv(input_file_path): # Convert .dat file to .csv file
 
 ### Deployment
 
-![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)
-The site can be accessed at [saravanakumar.pythonanywhere.com](https://saravanakumar.pythonanywhere.com).
+<div align="center">
+   <img src="https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515" alt="PythonAnywhere">
+   <p>The site can be accessed at <a href="https://saravanakumar.pythonanywhere.com">here</a></p>
+</div>
+
+
 
 ### Acknowledgement
 
