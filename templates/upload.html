@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>File Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,14 +30,30 @@
             max-width: 100%; /* Make images responsive by setting maximum width */
             height: auto; /* Ensure images maintain aspect ratio */
         }
+        section {
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: justify;
+            margin-bottom: 30px;
+            background-color: #f9f9f9; /* Example background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .head{
+            text-align: center;
+            text-decoration: underline;
+        }
+        
 
         /* Responsive styles */
         /* For smaller screens */
         @media screen and (max-width: 768px) {
         body {
-            font-size: 14px; /* Adjust font size for smaller screens */
+            font-size: 10px; /* Adjust font size for smaller screens */
         }
-    
+
+
         header, footer {
             padding: 8px; /* Reduce padding for header and footer on smaller screens */
         }
@@ -50,6 +67,26 @@
     
         header, footer {
             padding: 12px; /* Increase padding for header and footer on larger screens */
+        }
+        /* Your CSS styles here */
+        /* ... */
+        /* Add some basic animations */
+        
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+        /* Add hover effect */
+        .icon:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease-in-out;
         }   
     }
 
@@ -65,25 +102,74 @@
         
         <!-- .dat to .csv conversion section -->
         <div class="conversion-section">
-            <h2>Convert File</h2>
+            <h2>Convert .DAT to .CSV File</h2>
+            <p2 style="font-size: 14px; margin-bottom: 10px">This website allows you to convert .dat files to .csv format. The .dat file should be structured in a format similar to the one below</p2>
+
             <!-- Input form for file conversion -->
-            <form method="POST" enctype="multipart/form-data">
-                <input type="file" name="file" accept=".dat">
-                <input type="submit" value="Download">
-            </form>
+            <div class="input">
+                <form method="post" enctype="multipart/form-data">
+                    <input class="choose" type="file" name="files[]" multiple style="width: 300px; height: 40px;">
+                    <input class="convert" type="submit" value="Download CSV" style="width: 300px; height: 40px;">
+                </form>
+                <h3>Download Sample .dat file<a href="" download>here</a></h3>
+                <p2 style="font-size: 14px">This data is for demonstration purposes only. The actual data is not available for download. You can modify, edit the sample data using Notepad to test the output.</p2>
+            </div>
             
         <!-- .dat and .csv comparison section -->
         <div class="comparison-section">
             <h2>Input File Format</h2>
-            <p>The .dat file containing data segments should be structured in a format similar to the one below</p>
-            <img src="https://i.postimg.cc/436x9Wd8/dat.jpg" alt=".dat Image">    
+            <p>The .dat file containing data segments must be structured in a format similar to the one below</p>
+            <img src="https://i.postimg.cc/436x9Wd8/dat.jpg" alt=".dat Image">
         </div>
+
         <div class="comparison-section">
             <h2>Output File Format</h2>
             <p class="para">For the given input, the desired output CSV would resemble like the below in csv format</p>
             <img src="https://i.postimg.cc/HnZxLjxd/csv.jpg" alt=".csv Image">
         </div>
     </div>
+    <div class="main-content">
+        <section class="overview animated">
+            <h2 class="head">Overview</h2>
+            <p>This project is a Python-based .dat to .csv file converter initially developed during my internship tenure at the National Institute of Wind Energy (NIWE). The objective was to address the challenge of converting .dat files to .csv format efficiently.</p>
+            <p>You can access my github repository <b><a href="https://github.com/Saravanakumar2003/DAT-to-CSV-Convertor" target="_blank">here</a></b></p>
+        </section>
+
+        <section class="features animated">
+            <h2 class="head">Key Features</h2>
+            <ul><i class="fas fa-wind"></i> Conversion of .dat files from NIWE's wind energy data to .csv format.</ul>
+            <ul><i class="fas fa-code"></i> Utilizes Python's CSV, re, and os libraries to handle data processing and conversion.</ul>
+            <ul><i class="fas fa-desktop"></i> A responsive website to convert files effortlessly.</ul>
+            <ul><i class="fas fa-globe"></i> Accessible from any device, anytime, and anywhere.</ul>
+            <ul><i class="fas fa-clock"></i> Conversion of .dat files to .csv in a fraction of a second.</ul>
+            <ul><i class="fas fa-file-download"></i>  Batch conversion of multiple .dat files to .csv format.</ul>
+        </section>
+
+        <section class="background animated">
+            <h2 class="head">Background</h2>
+            <p>Hi, I'm Saravanakumar from Velammal Engineering College, during my internship at NIWE, I enthusiastically embarked on the challenge of converting .dat files to .csv, an essential requirement for data analysis and visualization. Despite encountering complex data structures and a limited timeframe, I embraced the challenge, leading to a rewarding learning journey.</p>
+            <p>I was asked to create a Python code for easy conversion of .dat files to .csv format. However, I took an innovative step forward by deploying a user-friendly website, enabling anyone, regardless of technical expertise, to perform the conversion effortlessly. This proactive approach allows for automation and provides accessibility to perform the conversion in a fraction of a second using any device, anytime and anywhere.</p>
+        </section>
+
+        <section class="acknowledgment animated">
+            <h2 class="head">Acknowledgment</h2>
+            <p style=margin-bottom:"10px"> I express my deepest gratitude to the NIWE team for their invaluable support and guidance throughout this project.
+                <li>Dr.K Boopathy Sir provided exceptional mentorship, offering insightful guidance during the internship.</li>
+                <li>Zach Sir's technical support was instrumental in overcoming challenges.</li>
+                <li>Special thanks to Senthil Sir for providing crucial data (.dat sample files)</li>
+                <li>Thanks to Vinoth Sir for meticulously validating my project outputs.</li>
+
+            </p>
+        </section>
+
+        <section class="contact animated">
+            <h2 class="head">Contact</h2>
+                <ul><i class="fas fa-envelope"></i> Email: <a href="mailto:saravanaramaswamy2003@gmail.com"> saravanaramaswamy2003@gmailcom </a></ul>
+                <ul><i class="fas fa-phone"></i> Phone: <a href="tel:+918838416187"> +91 8838416187 </a></ul>
+                <ul><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/saravanaramaswamy2003/" target="_blank"> Saravanakumar</a></ul>
+        </section>
+    </div>
+
 
     <footer>
         <p>Created by Saravanakumar R - Copyright © 2023</p>

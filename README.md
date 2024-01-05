@@ -9,6 +9,7 @@ This project is a Python-based .dat to .csv file converter initially developed d
 - Conversion of .dat files from NIWE's wind energy data to .csv format.
 - Utilizes Python's CSV, re, and sys libraries to handle data processing and conversion.
 - A responsive website to convert files effortlessly.
+- Batch conversion of .dat files to .csv is supported.
 
 ## Background
 
@@ -146,8 +147,8 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
 
 <ul>
 <li>I express my deepest gratitude to the NIWE team for their invaluable support and guidance throughout this project.</li>
-<li> **Boopathy Sir** provided exceptional mentorship, offering insightful guidance during the internship.</li>
-<li> **Zach Sir's** technical support was instrumental in overcoming challenges. </li>
-<li>Special thanks to **Senthil Sir*** for providing crucial data and **Vinoth Sir** for meticulously validating project outputs.</li> 
+<li> <b>Boopathy Sir</b> provided exceptional mentorship, offering insightful guidance during the internship.</li>
+<li> <b> Zach Sir's  </b>technical support was instrumental in overcoming challenges. </li>
+<li>Special thanks to <b> Senthil Sir  </b> for providing crucial data and  <b>Vinoth Sir </b> for meticulously validating project outputs.</li> 
 <li>Their contributions were pivotal to the project's success and the invaluable learning experiences gained.</li>
 </ul>
