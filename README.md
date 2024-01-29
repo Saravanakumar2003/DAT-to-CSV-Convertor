@@ -133,6 +133,14 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir,
     <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge">
 </div>
 
+### Screenshots
+
+<a href="https://postimg.cc/t7tf1DZG" target="_blank"><img src="https://i.postimg.cc/FF2QBBhz/Intro.jpg" alt="Intro"/></a><br/><br/>
+
+## Getting Started
+- Click "Choose File" to select your .dat file.
+- Click "Convert" to initiate the conversion process.
+- Download the converted .csv file.
 
 ### Deployment
 
