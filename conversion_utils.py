@@ -29,6 +29,18 @@ def convert_dat_to_csv(input_file_path):
             final_row = {"Timestamp": ts}
 
             assert chunk[12].startswith("   ALT")
+            
+            
+            temp_in = float(chunk[1].split()[5])
+            pressure = float(chunk[1].split()[6])
+            temp_out = float(chunk[1].split()[7])
+            humidity = float(chunk[1].split()[8])                   
+
+            final_row["TEMP_IN"] = temp_in
+            final_row["PRESSURE"] = pressure
+            final_row["TEMP_OUT"] = temp_out
+            final_row["HUMIDITY"] = humidity
+
             for line in chunk[14:]:
                 _row = to_row(line)
 
@@ -40,7 +52,7 @@ def convert_dat_to_csv(input_file_path):
                 if int(alt) < 30:
                     continue
 
-                speed = float(_row[2])/100
+                speed = float(_row[2]) / 100
                 if speed == -99.99:
                     speed = -9999
 
