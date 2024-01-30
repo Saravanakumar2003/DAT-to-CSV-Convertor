@@ -100,10 +100,10 @@ Now, I have to convert this data into a CSV file named 'output.csv' with a speci
 For example, for a given input, the desired output CSV would resemble:
 
 ```
-Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir, ..., ALT30_Dir
+Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in, Pressure, Temp_out, Humidity
 
-2023-12-07 00:00:00, 2.99, 2.88, ..., 0.29, 46, 46, ..., 73
-2023-12-07 00:00:10, 5.98, 5.99, ..., 5.91, 39, 39, ..., 36
+2023-12-07 00:00:00, 2.99, 2.88, ..., 46, 46, ..., 43.3, 998.7, 25.1, 86.0 
+2023-12-07 00:00:10, 5.98, 5.99, ..., 39, 39, ..., 48.5, 997.7, 28.2, 73.2 
 
 
 ```
