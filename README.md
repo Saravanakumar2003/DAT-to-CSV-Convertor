@@ -94,7 +94,7 @@ Now, I have to convert this data into a CSV file named 'output.csv' with a speci
 2. Subsequent rows should contain:
 
 - Timestamp in YYYY-MM-DD HH:MM:SS format extracted from the XML.
-- Wind speeds at different altitudes (200m to 30m).
+- Wind speeds at different altitudes (200m to 30m) and divide by 100 (Cm/s to M/s Conversion).
 - Wind directions at different altitudes (200m to 30m).
 
 For example, for a given input, the desired output CSV would resemble:
@@ -102,8 +102,8 @@ For example, for a given input, the desired output CSV would resemble:
 ```
 Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT30_Speed, ALT200_Dir, ALT190_Dir, ..., ALT30_Dir
 
-2023-12-07 00:00:00, 299, 288, ..., 29, 46, 46, ..., 73
-2023-12-07 00:00:10, 598, 599, ..., 591, 39, 39, ..., 36
+2023-12-07 00:00:00, 2.99, 2.88, ..., 0.29, 46, 46, ..., 73
+2023-12-07 00:00:10, 5.98, 5.99, ..., 5.91, 39, 39, ..., 36
 
 
 ```
