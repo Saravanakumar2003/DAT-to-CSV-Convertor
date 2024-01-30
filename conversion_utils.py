@@ -1,6 +1,4 @@
-import csv
 import re
-import os
 
 def to_row(line: str) -> list[str]:
     row = [x.strip() for x in re.split(r"\s+", line)]
@@ -42,7 +40,7 @@ def convert_dat_to_csv(input_file_path):
                 if int(alt) < 30:
                     continue
 
-                speed = float(_row[2])
+                speed = float(_row[2])/100
                 if speed == -99.99:
                     speed = -9999
 
