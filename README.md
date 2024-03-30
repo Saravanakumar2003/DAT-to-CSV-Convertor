@@ -83,7 +83,8 @@ $
 
 $
 
-Again the same above format only the data will change. This dataset contains multiple segments similar to the provided snippet, each representing a 10-minute interval of records between each $.
+Again the same above format only the data will change. This dataset contains multiple segments
+similar to the provided snippet, each representing a 10-minute interval of records between each $.
 
 $
 ```
@@ -96,6 +97,7 @@ Now, I have to convert this data into a CSV file named 'output.csv' with a speci
 - Timestamp in YYYY-MM-DD HH:MM:SS format extracted from the XML.
 - Wind speeds at different altitudes (200m to 30m) and divide by 100 (Cm/s to M/s Conversion).
 - Wind directions at different altitudes (200m to 30m).
+- Temperatur internal, Pressure, Temperature external and Humidity
 
 For example, for a given input, the desired output CSV would resemble:
 
@@ -141,6 +143,11 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
 - Click "Choose File" to select your .dat file.
 - Click "Convert" to initiate the conversion process.
 - Download the converted .csv file.
+
+### Video Walkthrough
+
+[![Video Walkthrough](https://img.youtube.com/vi/ggpB_Erkl4k/0.jpg)](https://www.youtube.com/watch?v=ggpB_Erkl4k)
+
 
 ### Deployment
 
