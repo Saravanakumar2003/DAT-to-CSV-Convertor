@@ -128,7 +128,7 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
 
 - **Python**: Main programming language.
 - **Flask**: Web framework used for the converter website.
-- **re, sys and csv libraries**: Utilized for data manipulation and conversion.
+- **re, os and csv libraries**: Utilized for data manipulation and conversion.
 
 <div align="center">
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge">
@@ -138,11 +138,6 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
 ### Screenshots
 
 <a href="https://postimg.cc/t7tf1DZG" target="_blank"><img src="https://i.postimg.cc/FF2QBBhz/Intro.jpg" alt="Intro"/></a><br/><br/>
-
-## Getting Started
-- Click "Choose File" to select your .dat file.
-- Click "Convert" to initiate the conversion process.
-- Download the converted .csv file.
 
 ### Video Walkthrough
 
