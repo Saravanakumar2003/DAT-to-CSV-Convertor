@@ -4,12 +4,31 @@
 
 This project is a Python-based .dat to .csv file converter initially developed during my internship tenure at the National Institute of Wind Energy (NIWE). The objective was to address the challenge of converting .dat files to .csv format efficiently.
 
-### Key Features
+
+## Downloads
+
+### Download Sample File
+This is not original data (Created by Me, matching the format) from NIWE, **This data is for demonstration purposes only**. <br>
+You can modify, edit the sample data using Notepad to test the output.
+
+<a href="https://drive.google.com/uc?export=download&id=1L40IPuMj7HKl-5bTXiSAyI89jzCJH7g0" download >Download Sample .dat</a>
+
+### Download Offline Application
+
+Afraid of your data in the server? No worries, download the portable application and use it completely off-line. <br>
+**Note:** Windows may block the application and flag it unknown app. Kindly, Ignore the message. Trust me, it's safe.
+
+<a href="https://drive.google.com/uc?export=download&id=16gdMTOPjXNHLkQBJbFcz9bQeQGRsHbHT" download >Download Software</a>
+
+## Key Features
 
 - Conversion of .dat files from NIWE's wind energy data to .csv format.
 - Utilizes Python's CSV, re, and sys libraries to handle data processing and conversion.
 - A responsive website to convert files effortlessly.
+- Accessible from any device, anytime, and anywhere.
+- Conversion of .dat files to .csv in a fraction of a seconds.
 - Batch conversion of .dat files to .csv is supported.
+- Download the portable application and use it offline.
 
 ## Background
 
@@ -150,7 +169,6 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
    <img src="https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515" alt="PythonAnywhere">
    <p>The site can be accessed at <a href="https://saravanakumar.pythonanywhere.com">here</a></p>
 </div>
-
 
 
 ### Acknowledgement
