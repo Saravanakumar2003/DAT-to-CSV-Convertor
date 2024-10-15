@@ -18,7 +18,7 @@ You can modify, edit the sample data using Notepad to test the output.
 Afraid of your data in the server? No worries, download the portable application and use it completely off-line. <br>
 **Note:** Windows may block the application and flag it unknown app. Kindly, Ignore the message. Trust me, it's safe.
 
-<a href="https://drive.google.com/uc?export=download&id=16gdMTOPjXNHLkQBJbFcz9bQeQGRsHbHT" download >Download Software</a>
+<a href="https://github.com/Saravanakumar2003/DAT2CSV_GUI_APP/releases" download >Download Software</a>
 
 ## Key Features
 
