@@ -1,11 +1,15 @@
-from flask import Flask, render_template, request, redirect, send_file, url_for
+from flask import Flask, render_template, request, redirect, send_file, url_for, jsonify
 from conversion_utils import convert_dat_to_csv
 import os
 import csv
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploaded_files/'
-app.config['CONVERTED_FOLDER'] = 'converted_files/'
+app.config['UPLOAD_FOLDER'] = '/tmp/uploaded_files/'
+app.config['CONVERTED_FOLDER'] = '/tmp/converted_files/'
+
+# Ensure the directories exist
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+os.makedirs(app.config['CONVERTED_FOLDER'], exist_ok=True)
 
 # Define the desired order of fieldnames
 fieldnames_order = [
@@ -18,48 +22,51 @@ def upload_form():
 
 @app.route('/', methods=['POST'])
 def upload_files():
-    uploaded_files = request.files.getlist("files[]")
-    output_rows = []
+    try:
+        uploaded_files = request.files.getlist("files[]")
+        output_rows = []
 
-    for file in uploaded_files:
-        if file.filename == '':
-            continue
+        for file in uploaded_files:
+            if file.filename == '':
+                continue
 
-        filename = file.filename
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(file_path)
+            filename = file.filename
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
 
-        converted_data = convert_dat_to_csv(file_path)
-        output_rows.extend(converted_data)
+            converted_data = convert_dat_to_csv(file_path)
+            output_rows.extend(converted_data)
 
-    output_rows = [row for row in output_rows if isinstance(row, dict)]
+        output_rows = [row for row in output_rows if isinstance(row, dict)]
 
-    if output_rows:
-        output_file_path = os.path.join(app.config['CONVERTED_FOLDER'], 'output.csv')
+        if output_rows:
+            output_file_path = os.path.join(app.config['CONVERTED_FOLDER'], 'output.csv')
 
-        fieldnames = set()
-        for row in output_rows:
-            fieldnames.update(row.keys())
+            fieldnames = set()
+            for row in output_rows:
+                fieldnames.update(row.keys())
 
-        ordered_fieldnames = [fieldname for fieldname in fieldnames_order if fieldname in fieldnames]
-        remaining_fieldnames = [fieldname for fieldname in fieldnames if fieldname not in ordered_fieldnames]
-        ordered_fieldnames.extend(remaining_fieldnames)
+            ordered_fieldnames = [fieldname for fieldname in fieldnames_order if fieldname in fieldnames]
+            remaining_fieldnames = [fieldname for fieldname in fieldnames if fieldname not in ordered_fieldnames]
+            ordered_fieldnames.extend(remaining_fieldnames)
 
-        with open(output_file_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=ordered_fieldnames, restval="N/A")
-            writer.writeheader()
-            writer.writerows(output_rows)
+            with open(output_file_path, "w", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=ordered_fieldnames, restval="N/A")
+                writer.writeheader()
+                writer.writerows(output_rows)
 
-        return redirect(url_for('download_file', filename='output.csv'))
-    else:
-        return "Conversion failed. Please try again."
+            return redirect(url_for('download_file', filename='output.csv'))
+        else:
+            return "Conversion failed. Please try again."
+    except Exception as e:
+        return jsonify(error=str(e)), 500
 
 @app.route('/downloaded_files/<filename>')
 def download_file(filename):
     try:
         return send_file(os.path.join(app.config['CONVERTED_FOLDER'], filename), as_attachment=True)
     except Exception as e:
-        return str(e)
+        return jsonify(error=str(e)), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
