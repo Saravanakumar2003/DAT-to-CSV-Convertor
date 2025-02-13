@@ -1,0 +1,7 @@
+Flask==3.0.0
+<<<<<<< HEAD:Requirements.txt
+gunicorn==20.1.0
+=======
+Werkzeug==2.0.3
+gunicorn==20.1.0
+>>>>>>> 4f99ba8202382b99d5012514f2f2aff2dd87995c:requirements.txt
