@@ -18,7 +18,7 @@ You can modify, edit the sample data using Notepad to test the output.
 Afraid of your data in the server? No worries, download the portable application and use it completely off-line. <br>
 **Note:** Windows may block the application and flag it unknown app. Kindly, Ignore the message. Trust me, it's safe.
 
-<a href="https://github.com/Saravanakumar2003/DAT2CSV_GUI_APP/releases" download >Download Software</a>
+<a href="https://github.com/Saravanakumar2003/DAT-to-CSV-Convertor/releases/download/v1.0.0/dat2csv.exe" download >Download Software</a>
 
 ## Key Features
 
@@ -154,14 +154,11 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
     <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge">
 </div>
 
-### Screenshots
-
-<a href="https://postimg.cc/t7tf1DZG" target="_blank"><img src="https://i.postimg.cc/FF2QBBhz/Intro.jpg" alt="Intro"/></a><br/><br/>
-
 ### Video Walkthrough
 
-[![Video Walkthrough](https://img.youtube.com/vi/ggpB_Erkl4k/0.jpg)](https://www.youtube.com/watch?v=ggpB_Erkl4k)
+https://github.com/user-attachments/assets/248fd7d4-43ed-4759-9147-69ccd70f47c3
 
+Note: This video has the old UI and does not reflect the current design. However, the functionality remains the same.
 
 ### Deployment
 
