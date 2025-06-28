@@ -166,10 +166,51 @@ Timestamp, ALT200_Speed, ALT190_Speed, ..., ALT200_Dir, ALT190_Dir, ..., Temp_in
 ### Deployment
 
 <div align="center">
-   <img src="https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515" alt="PythonAnywhere">
-   <p>The site can be accessed at <a href="https://saravanakumar.pythonanywhere.com">here</a></p>
+      <img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Badge">
+   <p>The site can be accessed at <a href="https://dat2csv.vercel.app/">here</a></p>
 </div>
 
+---
+
+# .dat to .csv File Converter - GUI Application
+
+## Overview
+This repository alsp hosts a Python-based GUI application designed to convert `.dat` files into `.csv` format for easy data analysis. Built for offline use, it provides an intuitive interface for batch processing of wind energy data sourced from the National Institute of Wind Energy (NIWE).
+
+## Features
+- User-friendly GUI for easy file conversion.
+- Supports batch processing of multiple `.dat` files.
+- Offline functionality for secure data handling.
+- Fast conversion process, ensuring efficiency in data analysis.
+
+## Downloads
+You can download the latest release of the application from the following link:  
+[Download v1.0.0](https://github.com/Saravanakumar2003/DAT-to-CSV-Convertor/releases/download/v1.0.0/dat2csv.exe)
+
+## Getting Started
+
+### Prerequisites
+- Python 3.x
+
+### Installation
+1. Clone the repository to your local machine.
+```bash
+git clone https://github.com/Saravanakumar2003/DAT2CSV_GUI_APP
+```
+
+### Usage
+1. Navigate to the project directory:
+```bash
+cd GUI_APP
+```
+2. Run the `app.py` script using the following command:
+```bash
+python app.py
+```
+3. Select the `.dat` files you wish to convert to `.csv` format.
+4. Click on the `Convert` button to initiate the conversion process.
+
+---
 
 ### Acknowledgement
 
